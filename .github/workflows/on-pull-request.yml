@@ -1,12 +1,12 @@
-name: Deploy to Prod
+name: Deploy PR Environment
 on:
-  release:
-    types: [published]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 jobs:
   deploy:
     env:
-      NAMESPACE: prod
+      NAMESPACE: pr${{ github.event.number }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -20,8 +20,8 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
+
     
-      
       - name: Install Dependencies CDN
         run: npm install
         working-directory: ./example-rest-api-2
