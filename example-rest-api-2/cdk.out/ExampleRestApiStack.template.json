@@ -39,7 +39,7 @@
    "Properties": {
     "Code": {
      "S3Bucket": "cdk-hnb659fds-assets-280322056982-us-east-1",
-     "S3Key": "9ec55e385229f7df7e1f529f99bb2fea025931d7791a37a0f6a75c2f6ad9e45e.zip"
+     "S3Key": "528ed32577bb0cfc28c6b42b02179872d564d3abf334d82173bd12381ac3d120.zip"
     },
     "Role": {
      "Fn::GetAtt": [
@@ -55,7 +55,7 @@
    ],
    "Metadata": {
     "aws:cdk:path": "ExampleRestApiStack/HelloWorld/Resource",
-    "aws:asset:path": "asset.9ec55e385229f7df7e1f529f99bb2fea025931d7791a37a0f6a75c2f6ad9e45e",
+    "aws:asset:path": "asset.528ed32577bb0cfc28c6b42b02179872d564d3abf334d82173bd12381ac3d120",
     "aws:asset:is-bundled": false,
     "aws:asset:property": "Code"
    }
