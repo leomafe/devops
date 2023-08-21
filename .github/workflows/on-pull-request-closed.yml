@@ -21,18 +21,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
 
-      - name: Install Dependencies UI
-        run: npm install
-        working-directory: ./ui
-
-      - name: Build UI
-        run: npm run build
-        working-directory: ./ui
-
+    
       - name: Install Dependencies CDN
         run: npm install
-        working-directory: ./example-content-delivery-network
+        working-directory: ./example-rest-api-2
 
       - name: Destroy CDN
         run: npm run destroy
-        working-directory: ./example-content-delivery-network
+        working-directory: ./example-rest-api-2
