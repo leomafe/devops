@@ -25,6 +25,14 @@ jobs:
       - name: Install Dependencies CDN
         run: npm install
         working-directory: ./example-rest-api-2
+      
+      - name: Run Linter
+        run: npm run lint
+        working-directory: ./example-rest-api-2
+      
+      - name: Run Tests
+        run: npm run test
+        working-directory: ./example-rest-api-2
 
       - name: Deploy CDN
         run: npm run deploy
