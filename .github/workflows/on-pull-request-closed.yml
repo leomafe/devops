@@ -28,6 +28,10 @@ jobs:
       - name: Build UI
         run: npm run build
         working-directory: ./ui
+      
+      - name: Run Tests
+        run: npm run test
+        working-directory: ./example-rest-api-2
 
       - name: Install Dependencies CDN
         run: npm install
